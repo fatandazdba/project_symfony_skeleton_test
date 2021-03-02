@@ -62,6 +62,40 @@ class ApiPunkController extends AbstractController
         return (empty($data)) ? $this->error404() : new JsonResponse(['data' => $data], Response::HTTP_OK);
     }
 
+    /**
+     * @Route(path="/detailByFoodAndId", name="detailByFoodAndId", methods={ Request::METHOD_GET })
+     * @return Response
+     */
+    public function getDetailByFoodAndId(Request $request)
+    {
+        $food = $request->query->get('food');
+        $id = $request->query->get('id');
+        $url = 'https://api.punkapi.com/v2/beers?food=' . $food . '&id=' . $id;
+        // Create a client with a base URI
+        $client = new Client(['base_uri' => $url]);
+        $response = $client->request('GET', $url);
+
+        $bodyResponseString = $response->getBody()->getContents();
+        $bodyResponse = json_decode($bodyResponseString);
+
+        $data = array();
+        foreach ($bodyResponse as $valor) {
+            foreach ($valor as $key => $value) {
+                if ($key == "id" && (($value) == ($id))) {
+                    $temp = (array)($valor);
+                    $data[$id] = ['id' => $id,
+                        "name" => $temp['name'],
+                        "description" => $temp['description'],
+                        "tagline" => $temp['tagline'],
+                        "first_brewed" => $temp['first_brewed']
+                    ];
+                    break;
+                }
+            }
+        }
+        return (empty($data)) ? $this->error404() : new JsonResponse(['data' => $data], Response::HTTP_OK);
+    }
+
     protected function error404(): JsonResponse
     {
         $mensaje = [
