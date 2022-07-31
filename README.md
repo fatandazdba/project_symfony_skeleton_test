@@ -6,3 +6,6 @@ uno que permita buscar en base una cadena de búsqueda. El campo para filtrar se
 Los servicios creados deben ser RESTful y tener como formato de salida JSON. Elige los nombres para los endpoints, propiedades, etc que te parezcan más adecuados y fáciles de tratar para las aplicaciones.
 
 La solución del ejercicio debe ser enviada en un repositorio de GitHub, GitLab o Bitbucket con el historial completo de git.
+
+## Respuesta del servicio
+![themes-architecture-diagram](https://raw.githubusercontent.com/fatandazdba/project_symfony_skeleton_test/b56f869a3ac5473a4aad182d4f2b35405a3fd312/web/food_carne.PNGhttps://raw.githubusercontent.com/fatandazdba/project_symfony_skeleton_test/b56f869a3ac5473a4aad182d4f2b35405a3fd312/web/food_carne.PNG)
