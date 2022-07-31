@@ -7,8 +7,8 @@ Los servicios creados deben ser RESTful y tener como formato de salida JSON. Eli
 
 La solución del ejercicio debe ser enviada en un repositorio de GitHub, GitLab o Bitbucket con el historial completo de git.
 
-## Respuesta del servicio
+## Respuesta del servicio by id
 ![themes-architecture-diagram](https://raw.githubusercontent.com/fatandazdba/project_symfony_skeleton_test/b56f869a3ac5473a4aad182d4f2b35405a3fd312/web/detailByFoodAndId.PNG)
 
-## Respuesta del servicio
+## Respuesta del servicio by food
 ![themes-architecture-diagram](https://raw.githubusercontent.com/fatandazdba/project_symfony_skeleton_test/b56f869a3ac5473a4aad182d4f2b35405a3fd312/web/food_carne.PNG)
